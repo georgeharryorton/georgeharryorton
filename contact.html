@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Test Website 1</title>
+  <meta name="description" content="Contact details for Test Website 1." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">TW1</a>
+    <nav id="nav" class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional</a></li>
+        <li><a href="personal.html">Personal</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <h1>Contact</h1>
+    <p>Best way to reach me is email. The form below opens your mail client:</p>
+    <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p class="small">Replace <code>hello@example.com</code> in <code>contact.html</code> with your address.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Test Website 1 · <a href="contact.html">Get in touch</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

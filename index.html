@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test Website 1 — Home</title>
+  <meta name="description" content="Test Website 1 — a simple personal website to share professional work and personal interests." />
+  <meta property="og:title" content="Test Website 1 — Personal Site" />
+  <meta property="og:description" content="Professional highlights, personal interests, and contact." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Test Website 1">TW1</a>
+    <nav id="nav" class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="professional.html">Professional</a></li>
+        <li><a href="personal.html">Personal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Welcome to <span class="accent">Test Website 1</span></h1>
+        <p class="lead">
+          A clean, free personal website. Explore professional highlights, personal interests,
+          and ways to get in touch.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="professional.html">Professional</a>
+          <a class="btn btn-ghost" href="personal.html">Personal</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 600 300" role="img" aria-label="Abstract blue lines">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0%" stop-color="currentColor" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="currentColor" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <path d="M10,200 C150,120 300,80 590,140" fill="none" stroke="url(#g)" stroke-width="28" stroke-linecap="round"/>
+        <path d="M10,220 C150,140 300,100 590,160" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round"/>
+        <path d="M10,240 C150,160 300,120 590,180" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Professional</h3>
+        <p>Experience, skills, and education at a glance.</p>
+        <a class="card-link" href="professional.html">See more →</a>
+      </article>
+      <article class="card">
+        <h3>Personal</h3>
+        <p>Hobbies, side projects, and what you’re into.</p>
+        <a class="card-link" href="personal.html">See more →</a>
+      </article>
+      <article class="card">
+        <h3>Contact</h3>
+        <p>Want to say hello? Send an email.</p>
+        <a class="card-link" href="contact.html">Reach out →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Test Website 1 · <a href="contact.html">Get in touch</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
