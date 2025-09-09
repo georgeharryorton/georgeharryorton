@@ -1,13 +1,4 @@
-:root{
-  /* Light theme — Blue & White */
-  --bg:#ffffff;
-  --card:#ffffff;
-  --text:#0f172a;      /* slate-900 */
-  --muted:#475569;     /* slate-600 */
-  --accent:#2563eb;    /* blue-600 */
-  --border:#e5e7eb;    /* gray-200 */
-  --ring:#c7d2fe;      /* indigo-200 */
-}
+:root{--bg:#ffffff;--card:#ffffff;--text:#0f172a;--muted:#475569;--accent:#2563eb;--border:#e5e7eb;}
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -24,7 +15,7 @@ a:hover{text-decoration:underline}
 .site-header{
   position:sticky; top:0; z-index:10;
   display:flex; align-items:center; justify-content:space-between;
-  padding:14px 18px; background:#ffffffee; backdrop-filter: blur(6px);
+  padding:14px 18px; background:#162a5fee; backdrop-filter: blur(6px);
   border-bottom:1px solid var(--border);
 }
 
@@ -66,9 +57,6 @@ h1{font-size: clamp(28px, 6vw, 52px); margin:0 0 8px}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn-ghost{background:#eff6ff}
-
-.hero-art{width:min(100%, 840px); height:auto; margin:28px auto 0; display:block; color:var(--accent)}
-
 .cards{display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); padding: 20px; max-width:1000px; margin:0 auto}
 .card{
   background: var(--card); border:1px solid var(--border); border-radius:14px; padding:16px;
@@ -96,3 +84,277 @@ h1{font-size: clamp(28px, 6vw, 52px); margin:0 0 8px}
 .small{color:var(--muted); font-size: 14px}
 
 .site-footer{padding:20px; text-align:center; color:var(--muted); border-top:1px solid var(--border); margin-top:28px}
+
+
+
+
+/* Each item uses 3 grid rows: top text, chevron row, bottom text */
+/* Chevron box (row 2) */
+/* Outside text defaults to top row (row 1) and left-aligned */
+/* Even items: move outside text below the chevron (row 3) */
+/* Year colors */
+.ct-2021, .ct-2022, .ct-2023 { background: #1E3A8A; }
+.ct-2024 { background: #EA580C; }
+.ct-2025 { background: #16A34A; }
+.ct-2021::after, .ct-2022::after, .ct-2023::after { border-left-color: #1E3A8A; }
+.ct-2024::after { border-left-color: #EA580C; }
+.ct-2025::after { border-left-color: #16A34A; }
+
+/* Mobile: stack items */
+@media (max-width: 900px) {
+}
+}
+}
+}
+
+
+/* === T2 tweak: Dark header & footer applied on all themes === */
+.site-header, header.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: #162a5fee; backdrop-filter: blur(6px);
+  
+}
+.site-footer, footer.site-footer {
+  background: #162a5f;
+  border-top: 1px solid #1e3a8a;
+  color: #eaf2ff;
+}
+.site-footer a { color: #eaf2ff; }
+.logo { border-color:#2563eb; color:#2563eb; background:#0b0c10; } /* keep brand pop on dark */
+
+
+/* === T2 tweak: Timeline compact + alternating === */
+/* horizontal layout — all chevrons aligned */
+/* remove old top tick */
+/* optional: subtle chevron shadow */
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));padding:20px}.gallery img{width:100%;height:auto;display:block;border-radius:10px}
+
+
+/* === T2 tweak: Footer fixed bottom + lighter blue === */
+html,body {height:100%;display:flex;flex-direction:column;}
+main {flex:1;}
+.site-footer, footer.site-footer {
+  background: #162a5f; /* lighter navy blue */
+  border-top: 1px solid #1e3a8a;
+  color: #eaf2ff;
+}
+
+
+/* === T2 tweak: sticky footer layout === */
+html, body { height: 100%; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.site-footer { margin-top: auto; }
+
+
+/* === T2 tweak: nav + button hover clarity === */
+nav a:hover, .btn:hover {
+  color: #dbeafe; /* light blue on hover */
+}
+.btn { border: 1px solid var(--accent); background: transparent; color: var(--accent); padding: 6px 14px; border-radius: 6px; }
+.btn:hover { background: #1e3a8a; color: #fff; }
+
+
+/* === T2 tweak: logo fill lighter === */
+.logo, header a img, header a svg {
+  background-color: #1e3a8a; /* lighter blue behind logo text */
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+
+/* === T2 tweak: header nav readability + states === */
+.site-header .menu a {
+  color: #dbeafe;                     /* unselected link text on dark header */
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.site-header .menu a[aria-current="page"] {
+  background: #eff6ff;                /* light grey/blue box for selected */
+  border: 1px solid #dbeafe;
+  color: #1e3a8a;                     /* dark blue text inside the light box */
+}
+.site-header .menu a:hover {
+  background: #eff6ff;                /* show light box on hover */
+  border: 1px solid #dbeafe;
+  color: #1e3a8a;
+}
+
+/* Logo uses the same fill as the selected nav link */
+.logo {
+  background: #eff6ff;
+  border: 2px solid #dbeafe;
+  color: #2563eb;                     /* keep brand accent for the letters */
+}
+
+
+/* === T2 tweak: header always visible (sticky) === */
+.site-header, header.site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+}
+/* Ensure content doesn't overlay */
+main { position: relative; z-index: 0; }
+
+
+/* Default Option A: single thin sine-like wave */
+:root { --swirl:#dbeafe; } /* light blue */
+.site-header::after, .site-footer::before {
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  height:16px;
+  pointer-events:none;
+  background-repeat: repeat-x;
+  background-size: 240px 16px;
+  opacity:.55;
+}
+.site-header{ position: sticky; }
+.site-header::after { content: none !important; background: none !important; }
+.site-footer{ position: relative; }
+.site-footer::before{
+  top: -1px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='16' viewBox='0 0 240 16'><path d='M0 8 C 40 2, 80 14, 120 8 S 200 2, 240 8' fill='none' stroke='%23dbeafe' stroke-width='2.5' stroke-linecap='round'/></svg>");
+}
+
+/* --- Option B (alt): double wave (enable by uncommenting)
+.site-header::after, .site-footer::before{height:18px;background-size:240px 18px;opacity:.5}
+.site-header::after { content: none !important; background: none !important; }
+.site-footer::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='18' viewBox='0 0 240 18'><path d='M0 9 C 40 3, 80 15, 120 9 S 200 3, 240 9' fill='none' stroke='%23dbeafe' stroke-width='2.2' stroke-linecap='round'/><path d='M0 13 C 40 7, 80 19, 120 13 S 200 7, 240 13' fill='none' stroke='%23dbeafe' stroke-opacity='.6' stroke-width='1.4' stroke-linecap='round'/></svg>")}
+--- */
+
+/* --- Option C (alt): diagonal hatch (very subtle) (enable by uncommenting)
+.site-header::after, .site-footer::before{height:14px;background-size:10px 14px;opacity:.35}
+.site-header::after, .site-footer::before{background-image: linear-gradient(45deg, rgba(219,234,254,.8) 16.66%, rgba(219,234,254,0) 16.66%, rgba(219,234,254,0) 50%, rgba(219,234,254,.8) 50%, rgba(219,234,254,.8) 66.66%, rgba(219,234,254,0) 66.66%, rgba(219,234,254,0) 100%)}
+--- */
+
+
+/* === T2 tweak: header fixed, always visible === */
+:root { --header-h: 64px; } /* adjust if your header is taller */
+.site-header, header.site-header {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+body { padding-top: var(--header-h); }
+
+
+/* Force header to have no bottom border */
+.site-header, header.site-header {
+  border: none !important;
+}
+
+
+
+/* === T2 tweak: footer returns to solid fill (no wave) === */
+.site-footer::before { content: none !important; background: none !important; }
+
+
+/* Ensure logo and nav sit above the decorative wave */
+.site-header * { position: relative; z-index: 1; }
+
+
+
+
+
+/* === T2 tweak: footer same height as header === */
+.site-footer, footer.site-footer {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* remove extra padding */
+}
+
+
+
+/* aligns the chevrons on one line */
+}
+/* Chevron box sits in the middle row */
+/* Outside text defaults to top row and is left-aligned */
+/* Typography */
+/* Colors for years */
+/* Mobile stack */
+@media (max-width: 900px) {
+}
+
+
+/* === V19: home photo spacing tweaks & cleanup === */
+.home-photo { margin: 16px auto 6px; max-width: 1100px; }
+.home-photo img { display:block; max-width:100%; height:auto; margin: 16px auto 0 auto !important; border-radius:12px; }
+body#index main { padding-bottom: 8px; }
+
+
+/* === V20: Professional page small photo galleries === */
+.pro-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 14px 0 10px;
+}
+.pro-thumb{
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.pro-thumb img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* === V21: Professional page galleries — uniform height, above headings === */
+.pro-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+.pro-gallery.pro-gallery--uniform-h .pro-thumb img{
+  height: 160px;    /* uniform height */
+  width: auto;      /* width varies with aspect ratio */
+  display: block;
+}
+.pro-thumb{
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0;
+}
+
+
+
+/* === V22: Smaller galleries, keep one row, spacing above === */
+.pro-gallery{
+  display: flex;
+  flex-wrap: nowrap;     /* keep on a single row */
+  gap: 8px;
+  margin: 20px 0 8px;    /* space above gallery from text */
+  overflow-x: auto;      /* allow horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+.pro-gallery.pro-gallery--uniform-h .pro-thumb img{
+  height: 80px;   /* smaller uniform height for McBains/H&K */
+  width: auto;
+  display: block;
+}
+.pro-gallery-edu .pro-thumb img{
+  height: 60px;   /* even smaller for Education so it fits one row */
+}
+.pro-thumb{
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0;
+  flex: 0 0 auto; /* prevent shrinking so heights stay consistent */
+}
+

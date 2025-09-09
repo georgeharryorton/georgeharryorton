@@ -1,78 +1,64 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>George Orton — Home</title>
-  <meta name="description" content="Welcome to my website! Here you will find details on both my professional work and personal interests." />
-  <meta property="og:title" content="Test Website 1 — Personal Site" />
-  <meta property="og:description" content="Professional highlights, personal interests, and contact." />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>George Orton — Home</title>
+<meta content="Welcome to my website! Here you will find details on both my professional work and personal interests." name="description"/>
+<meta content="Test Website 1 — Personal Site" property="og:title"/>
+<meta content="Professional highlights, personal interests, and contact." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 </head>
-<body>
-  <header class="site-header">
-    <a class="logo" href="index.html" aria-label="Test Website 1">T1</a>
-    <nav id="nav" class="nav">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">☰</button>
-      <ul id="menu" class="menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="professional.html">Professional</a></li>
-        <li><a href="personal.html">Personal</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>George <span class="accent">Orton</span></h1>
-        <p class="lead">
+<body id="index">
+<header class="site-header">
+<a aria-label="Test Website 1" class="logo" href="index.html">T1</a>
+<nav class="nav" id="nav">
+<button aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle">☰</button>
+<ul class="menu" id="menu">
+<li><a aria-current="page" href="index.html">Home</a></li>
+<li><a href="professional.html">Professional</a></li>
+<li><a href="personal.html">Personal</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-inner">
+<h1>George <span class="accent">Orton</span></h1>
+<p class="lead">
           Welcome to my website! Here you will find details on both my professional work and personal interests.
         </p>
-        <div class="cta-row">
-          <a class="btn" href="professional.html">Professional</a>
-          <a class="btn btn-ghost" href="personal.html">Personal</a>
-        </div>
-      </div>
-      <svg class="hero-art" viewBox="0 0 600 300" role="img" aria-label="Abstract blue lines">
-        <defs>
-          <linearGradient id="g" x1="0" x2="1">
-            <stop offset="0%" stop-color="currentColor" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="currentColor" stop-opacity="0.05"/>
-          </linearGradient>
-        </defs>
-        <path d="M10,200 C150,120 300,80 590,140" fill="none" stroke="url(#g)" stroke-width="28" stroke-linecap="round"/>
-        <path d="M10,220 C150,140 300,100 590,160" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round"/>
-        <path d="M10,240 C150,160 300,120 590,180" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round"/>
-      </svg>
-    </section>
-
-    <section class="cards">
-      <article class="card">
-        <h3>Professional</h3>
-        <p>Experience, skills, and education at a glance.</p>
-        <a class="card-link" href="professional.html">See more →</a>
-      </article>
-      <article class="card">
-        <h3>Personal</h3>
-        <p>Hobbies, side projects, and what I've got planned for the future.</p>
-        <a class="card-link" href="personal.html">See more →</a>
-      </article>
-      <article class="card">
-        <h3>Contact</h3>
-        <p>Want to say hello? Send me an email.</p>
-        <a class="card-link" href="contact.html">Reach out →</a>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> George Orton - Test Website 1 · <a href="contact.html">Get in touch</a></p>
-  </footer>
-
-  <script src="script.js"></script>
+<div class="cta-row">
+<a class="btn" href="professional.html">Professional</a>
+<a class="btn btn-ghost" href="personal.html">Personal</a>
+</div><section class="home-photo"><img alt="Prototype aircraft on workbench" src="Homepage Photo.JPG" style="max-width:100%; height:auto; display:block; margin:20px auto; border-radius:12px;"/></section>
+</div>
+</section>
+<section class="cards">
+<article class="card">
+<h3>Professional</h3>
+<p>Experience, skills, and education at a glance.</p>
+<a class="card-link" href="professional.html">See more →</a>
+</article>
+<article class="card">
+<h3>Personal</h3>
+<p>Hobbies, side projects, and what I've got planned for the future.</p>
+<a class="card-link" href="personal.html">See more →</a>
+</article>
+<article class="card">
+<h3>Contact</h3>
+<p>Want to say hello? Send me an email.</p>
+<a class="card-link" href="contact.html">Reach out →</a>
+</article>
+</section>
+</main>
+<footer class="site-footer">
+<p>© <span id="year"></span> George Orton - Test Website 1 · <a href="contact.html">Get in touch</a></p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
